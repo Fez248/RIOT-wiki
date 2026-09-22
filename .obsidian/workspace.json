@@ -1,0 +1,237 @@
+{
+  "main": {
+    "id": "50906cd443ab8b30",
+    "type": "split",
+    "children": [
+      {
+        "id": "4204dd195a2eba15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cabd42f1a063cb32",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Relevant Legal Documents/CRA_OJ_L_202402847_EN_TXT.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "CRA_OJ_L_202402847_EN_TXT"
+            }
+          }
+        ]
+      },
+      {
+        "id": "9530fe9c0b3f28ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "269fc3d01ac93e30",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Relevant Legal Documents/Legal Framework.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Legal Framework"
+            }
+          },
+          {
+            "id": "4d9abd96d0a2cef8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Relevant Legal Documents/EU_Declaration_Of_Conformity_Template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "EU_Declaration_Of_Conformity_Template"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f191b96489110e21",
+    "type": "split",
+    "children": [
+      {
+        "id": "667c29990d1a19ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5611f0910e6c2988",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a13260a519006b80",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "54a02122d2389bd7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "475d1ab4492d1121",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb655afceaf284b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90b5610e8824bbf6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Relevant Legal Documents/Legal Framework.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "c841c45e879b28ad",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Relevant Legal Documents/Legal Framework.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "c12f14445ed37a3b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "acbdbd5afd3767f0",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "8a95c62d11a884f3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Relevant Legal Documents/Legal Framework.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "269fc3d01ac93e30",
+  "lastOpenFiles": [
+    "Relevant Legal Documents/EU_Declaration_Of_Conformity_Template.md",
+    "Relevant Legal Documents/Legal Framework.md",
+    "Relevant Legal Documents/CRA_OJ_L_202402847_EN_TXT.pdf",
+    "Annex II.md",
+    "Relevant Legal Documents/Commission_Implementation_OJ_L_202500138_EN_TXT.pdf",
+    "Software Architecture/architecure.md",
+    "Software Architecture/AI Prompts and Context/devin-prompt-v1.md",
+    "Software Architecture/AI Prompts and Context/context.md",
+    "Software Architecture/AI Prompts and Context",
+    "Software Architecture",
+    "Relevant Legal Documents"
+  ]
+}
