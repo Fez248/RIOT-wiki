@@ -4,16 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4204dd195a2eba15",
+        "id": "09876cd63f67a962",
         "type": "tabs",
+        "dimension": 56.57458563535912,
         "children": [
           {
-            "id": "cabd42f1a063cb32",
+            "id": "d588e732e2a08cfc",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Relevant Legal Documents/CRA_OJ_L_202402847_EN_TXT.pdf"
+                "file": "Relevant Legal Documents/law-pdfs/CRA_OJ_L_202402847_EN_TXT.pdf"
               },
               "icon": "lucide-file-text",
               "title": "CRA_OJ_L_202402847_EN_TXT"
@@ -22,11 +23,12 @@
         ]
       },
       {
-        "id": "9530fe9c0b3f28ce",
+        "id": "603c156fa4eaf6ae",
         "type": "tabs",
+        "dimension": 43.425414364640886,
         "children": [
           {
-            "id": "269fc3d01ac93e30",
+            "id": "32dc3d94d5357ca3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -40,20 +42,21 @@
             }
           },
           {
-            "id": "4d9abd96d0a2cef8",
+            "id": "407d5f4ec4ad5f80",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Relevant Legal Documents/EU_Declaration_Of_Conformity_Template.md",
+                "file": "Relevant Legal Documents/Road_map_to_compliance.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EU_Declaration_Of_Conformity_Template"
+              "title": "Road_map_to_compliance"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -220,18 +223,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "269fc3d01ac93e30",
+  "active": "407d5f4ec4ad5f80",
   "lastOpenFiles": [
-    "Relevant Legal Documents/EU_Declaration_Of_Conformity_Template.md",
-    "Relevant Legal Documents/Legal Framework.md",
-    "Relevant Legal Documents/CRA_OJ_L_202402847_EN_TXT.pdf",
-    "Annex II.md",
-    "Relevant Legal Documents/Commission_Implementation_OJ_L_202500138_EN_TXT.pdf",
     "Software Architecture/architecure.md",
+    "Relevant Legal Documents/Road_map_to_compliance.md",
+    "Relevant Legal Documents/Legal Framework.md",
+    "Relevant Legal Documents/law-pdfs/CRA_OJ_L_202402847_EN_TXT.pdf",
+    "Relevant Legal Documents/law-pdfs/Commission_Implementation_OJ_L_202500138_EN_TXT.pdf",
+    "Relevant Legal Documents/ferrita-user-information-template/cra-user-information-template-v2.pdf",
+    "Relevant Legal Documents/ferrita-declaration-of-conformity-template/eu-declaration-of-conformity-template-v2.pdf",
+    "Relevant Legal Documents/Checklist_for_compliance.md",
+    "Relevant Legal Documents/ferrita-declaration-of-conformity-template/eu-declaration-of-conformity-template-v2.tex",
+    "Relevant Legal Documents/ferrita-user-information-template/cra-user-information-template-v2.tex",
+    "Relevant Legal Documents/CRA_OJ_L_202402847_EN_TXT.pdf",
+    "Relevant Legal Documents/law-pdfs",
+    "Relevant Legal Documents/pdfs",
+    "Relevant Legal Documents/Commission_Implementation_OJ_L_202500138_EN_TXT.pdf",
+    "Relevant Legal Documents/EU_Declaration_Of_Conformity_Template.md",
+    "Relevant Legal Documents/Product Information Template.md",
+    "Relevant Legal Documents/Product Information.md",
+    "Annex III.md",
+    "Annex II.md",
     "Software Architecture/AI Prompts and Context/devin-prompt-v1.md",
-    "Software Architecture/AI Prompts and Context/context.md",
-    "Software Architecture/AI Prompts and Context",
-    "Software Architecture",
-    "Relevant Legal Documents"
+    "Software Architecture/AI Prompts and Context/context.md"
   ]
 }

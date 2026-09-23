@@ -1,0 +1,275 @@
+% =============================================================================
+%  EU DECLARATION OF CONFORMITY
+%  Regulation (EU) 2024/2847 (Cyber Resilience Act) -- Article 28, Annex V
+%
+%  Ferrita document template. Compiles with pdfLaTeX (Overleaf default).
+%  Requires ferrita.sty in the same project.
+%
+%  HOW TO USE
+%   1. Fill in every \newcommand in the CLIENT DATA block.
+%   2. Replace \ClientLogo with \includegraphics of the manufacturer's logo.
+%   3. Edit the tables where needed; delete rows that do not apply (e.g. the
+%      notified body for self-assessed products). Grey notes are guidance for
+%      the author: delete them before release.
+%   4. Compile. Anything still amber [in brackets] is an unfilled placeholder.
+%
+%  LEGAL NOTE: the declaration is a statement by the MANUFACTURER (or its
+%  authorised representative) under its sole responsibility. Ferrita only
+%  prepares the template and appears as a document-preparation credit, never
+%  as declarant or signatory.
+% =============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage{ferrita}
+
+% =============================================================================
+%  CLIENT DATA
+% =============================================================================
+% --- Declaration control ------------------------------------------------------
+\newcommand{\DoCNumber}{\TODO{DoC-2026-0001}}
+\newcommand{\DoCVersion}{\TODO{1.0}}
+\newcommand{\DoCLanguage}{English}
+
+% --- Manufacturer / declarant (Annex V, point 2) ------------------------------
+\newcommand{\ManufacturerName}{\TODO{Manufacturer legal name}}
+\newcommand{\ManufacturerLegalForm}{\TODO{Legal form and registration number}}
+\newcommand{\ManufacturerAddress}{\TODO{Street, number, postal code, city, country}}
+\newcommand{\ManufacturerEmail}{\TODO{contact@manufacturer.example}}
+\newcommand{\ManufacturerWebsite}{\TODOurl{https://www.manufacturer.example}}
+% Authorised representative -- keep "Not applicable" if none is appointed
+\newcommand{\AuthRepName}{\TODO{Not applicable / authorised representative name}}
+\newcommand{\AuthRepAddress}{\TODO{Not applicable / address}}
+
+% --- Product identification (Annex V, points 1 and 4) ------------------------
+\newcommand{\ProductName}{\TODO{Product commercial name}}
+\newcommand{\ProductType}{\TODO{Product type / category}}
+\newcommand{\ProductModel}{\TODO{Model number(s)}}
+\newcommand{\ProductHwRevision}{\TODO{Hardware revision(s)}}
+\newcommand{\ProductSwVersion}{\TODO{Firmware version(s)}}
+\newcommand{\ProductSerialScheme}{\TODO{Serial-number range or format}}
+\newcommand{\ProductBatch}{\TODO{Batch / lot identifier(s)}}
+\newcommand{\ProductGtin}{\TODO{GTIN / EAN / part number}}
+\newcommand{\ProductDescription}{\TODO{One-paragraph description of the product
+  and its digital elements: hardware, embedded software, remote data processing.}}
+
+% --- Conformity assessment (Annex V, point 7) --------------------------------
+\newcommand{\ProductClass}{\TODO{Default / Important class I / Important class II / Critical}}
+\newcommand{\AssessmentProcedure}{\TODO{Internal control --- Module A, Annex VIII Part I}}
+\newcommand{\NotifiedBodyName}{\TODO{Not applicable / notified body name}}
+\newcommand{\NotifiedBodyNumber}{\TODO{Not applicable / NB 0000}}
+\newcommand{\CertificateId}{\TODO{Not applicable / certificate number}}
+
+% --- Signature (Annex V, point 8) ---------------------------------------------
+\newcommand{\SignPlace}{\TODO{City, country}}
+\newcommand{\SignDate}{\TODO{DD Month YYYY}}
+\newcommand{\SignatoryName}{\TODO{Signatory full name}}
+\newcommand{\SignatoryFunction}{\TODO{Function, e.g.\ Chief Executive Officer}}
+
+% --- Ferrita (document-preparation credit only) -------------------------------
+\newcommand{\PartnerName}{Ferrita}
+\newcommand{\PartnerLegal}{Ferrita SL \textperiodcentered\ Barcelona}
+\newcommand{\PartnerTagline}{Product security for embedded devices}
+\newcommand{\PartnerWebsite}{ferrita.eu}
+
+% --- Logos and photo ----------------------------------------------------------
+% e.g. \newcommand{\ClientLogo}{\includegraphics[height=1.4cm]{client-logo.pdf}}
+\newcommand{\ClientLogo}{\LogoPlaceholder{3.4cm}{1.4cm}}
+% Optional photograph (Annex V, point 4). Set to {} to omit.
+\newcommand{\ProductPhoto}{{\color{rulegrey}\fbox{\parbox[c][3.8cm][c]{5.4cm}{%
+  \centering\color{grey}\footnotesize PRODUCT PHOTOGRAPH\\(optional)}}}}
+
+% --- Running header/footer text -----------------------------------------------
+\newcommand{\DocHeaderLeft}{EU Declaration of Conformity}
+\newcommand{\DocHeaderRight}{\DoCNumber\ v\DoCVersion}
+\newcommand{\DocFooterLeft}{\ManufacturerName}
+\hypersetup{pdftitle={EU Declaration of Conformity -- Regulation (EU) 2024/2847},
+            pdfauthor={\PartnerName}}
+
+% =============================================================================
+\begin{document}
+
+% ----------------------------- TITLE BLOCK -----------------------------------
+\noindent
+\begin{minipage}[c]{0.5\textwidth}\ClientLogo\end{minipage}%
+\begin{minipage}[c]{0.5\textwidth}\raggedleft\ttfamily\small\color{grey}
+  Regulation (EU) 2024/2847\\Article 28 \textperiodcentered\ Annex V
+\end{minipage}
+
+\vspace{1.4cm}
+{\fontsize{26}{31}\selectfont\bfseries\color{ink}EU Declaration of Conformity\par}
+\vspace{0.5cm}
+{\color{petrol}\rule{3cm}{2pt}\par}
+\vspace{0.5cm}
+\noindent
+\begin{tabularx}{\textwidth}{@{}K L@{}}
+  Declaration number & \mono{\DoCNumber} \\
+  Version            & \mono{\DoCVersion} \\
+  Language           & \DoCLanguage \\
+  Declarant          & \ManufacturerName \\
+\end{tabularx}
+\vspace{0.4cm}
+
+% =============================================================================
+\section{Product identification}\reftag{Annex V, point 1}
+% =============================================================================
+\begin{kvtable}
+  Product name                 & \ProductName \\
+  Product type                 & \ProductType \\
+  Model(s)                     & \mono{\ProductModel} \\
+  Hardware revision(s)         & \mono{\ProductHwRevision} \\
+  Firmware version(s)          & \mono{\ProductSwVersion} \\
+  Serial numbers               & \ProductSerialScheme \\
+  Batch / lot                  & \mono{\ProductBatch} \\
+  GTIN / EAN / part number     & \mono{\ProductGtin} \\
+\end{kvtable}
+
+% =============================================================================
+\needspace{6\baselineskip}
+\section{Manufacturer and authorised representative}\reftag{Annex V, point 2}
+% =============================================================================
+\begin{kvtable}
+  Manufacturer (legal name)    & \ManufacturerName \\
+  Legal form / registration    & \ManufacturerLegalForm \\
+  Address                      & \ManufacturerAddress \\
+  Email                        & \ManufacturerEmail \\
+  Website                      & \ManufacturerWebsite \\
+\end{kvtable}
+\needspace{5\baselineskip}
+\begin{kvtable}
+  Authorised representative    & \AuthRepName \\
+  Address                      & \AuthRepAddress \\
+\end{kvtable}
+\editnote{Delete the authorised-representative rows if none has been appointed
+under Article 20 CRA.}
+
+% =============================================================================
+\section{Sole responsibility}\reftag{Annex V, point 3}
+% =============================================================================
+\begin{statement}
+  This EU declaration of conformity is issued under the \textbf{sole
+  responsibility of the manufacturer}, \textbf{\ManufacturerName}, which is
+  the legally responsible entity within the meaning of Article~28 of
+  Regulation (EU) 2024/2847.
+
+  \PartnerName\ (\PartnerLegal) has assisted the manufacturer in preparing
+  this document. \PartnerName\ is \textbf{not} the manufacturer, authorised
+  representative, importer or distributor of the product, is not a signatory
+  to this declaration, and assumes no responsibility for the conformity of the
+  product or for the accuracy of the statements made herein.
+\end{statement}
+
+% =============================================================================
+\section{Object of the declaration}\reftag{Annex V, point 4}
+% =============================================================================
+\noindent
+\begin{minipage}[t]{0.56\textwidth}
+  \vspace{0pt}
+  \ProductDescription
+
+  Traceability: the product is identified by the model, hardware revision,
+  firmware version, serial-number and batch information in Section~1, which
+  are also marked on the product and/or its packaging.
+\end{minipage}\hfill
+\begin{minipage}[t]{0.40\textwidth}
+  \vspace{0pt}\raggedleft\ProductPhoto
+\end{minipage}
+
+% =============================================================================
+\section{Statement of conformity}\reftag{Annex V, point 5}
+% =============================================================================
+\begin{statement}
+  The object of the declaration described above is in conformity with the
+  relevant Union harmonisation legislation:
+  \begin{itemize}[topsep=4pt]
+    \item \textbf{Regulation (EU) 2024/2847} of the European Parliament and of
+      the Council of 23 October 2024 on horizontal cybersecurity requirements
+      for products with digital elements (Cyber Resilience Act), in particular
+      the essential cybersecurity requirements of \textbf{Annex~I}.
+    \item \TODO{Other applicable Union legislation, e.g.\ Directive 2014/53/EU
+      (RED), Directive 2014/30/EU (EMC), Directive 2014/35/EU (LVD), Directive
+      2011/65/EU (RoHS). Delete if not applicable.}
+  \end{itemize}
+\end{statement}
+\editnote{Where other Union acts also require an EU declaration of conformity,
+a single declaration covering all acts may be drawn up (Article 28(3) CRA).
+List every act with its Official Journal reference.}
+
+% =============================================================================
+\needspace{10\baselineskip}
+\section{Harmonised standards, specifications and certifications}\reftag{Annex V, point 6}
+% =============================================================================
+Conformity is declared in relation to the following:
+
+\noindent
+\begin{tabularx}{\textwidth}{@{}P{3.6cm} L P{3.0cm}@{}}
+  \toprule
+  \textbf{Reference} & \textbf{Title} & \textbf{Applied to} \\
+  \midrule
+  \mono{\TODO{EN XXXXX:YYYY}} & \TODO{Harmonised standard title as cited in the OJEU} & \TODO{Annex I, Part I} \\
+  \mono{\TODO{EN XXXXX:YYYY}} & \TODO{Harmonised standard title} & \TODO{Annex I, Part II} \\
+  \TODO{Common spec.} & \TODO{Common specification adopted under Article 27 CRA} & \TODO{Annex I, points} \\
+  \TODO{Certificate} & \TODO{European cybersecurity certification scheme (Regulation (EU) 2019/881), assurance level} & \TODO{Annex I, points} \\
+  \bottomrule
+\end{tabularx}
+\editnote{List only standards published in the Official Journal as harmonised
+standards, or common specifications / certification schemes recognised under
+the CRA. If none apply, replace the table with: ``No harmonised standards
+applied; conformity is demonstrated by the technical documentation
+(Annex~VII).''}
+
+% =============================================================================
+\needspace{10\baselineskip}
+\section{Conformity assessment procedure and notified body}\reftag{Annex V, point 7}
+% =============================================================================
+\begin{kvtable}
+  Product classification (Article 7, Annexes III--IV)       & \ProductClass \\
+  Conformity assessment procedure (Article 32, Annex VIII)  & \AssessmentProcedure \\
+  Notified body --- name                                    & \NotifiedBodyName \\
+  Notified body --- identification number                   & \mono{\NotifiedBodyNumber} \\
+  Certificate issued                                        & \mono{\CertificateId} \\
+\end{kvtable}
+\editnote{For default-category products assessed by internal control (Module A)
+keep the notified-body rows as ``Not applicable''. For Module B+C, Module H or
+a certification route, give the body's name, four-digit identification number
+and the certificate reference.}
+
+% =============================================================================
+\needspace{12\baselineskip}
+\section{Additional information and signature}\reftag{Annex V, point 8}
+% =============================================================================
+\begin{kvtable}
+  Support period end-date  & \TODO{DD Month YYYY} \\
+  Technical documentation  & \TODO{Held by the manufacturer at the address in Section 2; reference TD-XXXX} \\
+  Related documents        & \TODO{Information and Instructions to the User, ref.\ DOC-0001} \\
+  Other information        & \TODO{Any other relevant information, or ``None''} \\
+\end{kvtable}
+
+\vspace{0.6cm}
+\textbf{Signed for and on behalf of:} \ManufacturerName
+
+\noindent
+\begin{tabularx}{\textwidth}{@{}K L@{}}
+  Place and date of issue & \SignPlace, \SignDate \\
+  Name                    & \SignatoryName \\
+  Function                & \SignatoryFunction \\
+\end{tabularx}
+
+\vspace{1.6cm}
+\noindent
+\begin{minipage}[t]{0.55\textwidth}
+  {\color{rulegrey}\rule{0.92\linewidth}{0.4pt}}\\
+  {\small Signature --- \SignatoryName, \SignatoryFunction}\\
+  {\small for and on behalf of \ManufacturerName}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.38\textwidth}
+  \raggedleft{\color{rulegrey}\fbox{\parbox[c][2.4cm][c]{0.9\linewidth}{%
+    \centering\color{grey}\footnotesize COMPANY STAMP\\(optional)}}}
+\end{minipage}
+
+\vspace{1.2cm}
+\begin{block}[Document preparation]
+  \small Template prepared by \textbf{\PartnerName} --- \PartnerLegal\ ---
+  \PartnerWebsite. The declarant and sole legally responsible entity is
+  \textbf{\ManufacturerName}. \PartnerName\ is not a party to this declaration.
+\end{block}
+
+\end{document}

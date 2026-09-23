@@ -1,0 +1,355 @@
+% =============================================================================
+%  INFORMATION AND INSTRUCTIONS TO THE USER
+%  Regulation (EU) 2024/2847 (Cyber Resilience Act) -- Article 13(18), Annex II
+%
+%  Ferrita document template. Compiles with pdfLaTeX (Overleaf default).
+%  Requires ferrita.sty in the same project.
+%
+%  HOW TO USE
+%   1. Fill in every \newcommand in the CLIENT DATA block.
+%   2. Replace \ClientLogo with \includegraphics of the manufacturer's logo.
+%      The Ferrita mark is drawn by ferrita.sty; swap \FerritaLockup for the
+%      real asset there if preferred.
+%   3. Edit the body sections (Annex II points 1-9). Grey notes are guidance
+%      for the author: delete them before release.
+%   4. Compile. Anything still amber [in brackets] is an unfilled placeholder.
+% =============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage{ferrita}
+
+% =============================================================================
+%  CLIENT DATA
+% =============================================================================
+% --- Manufacturer (Annex II, point 1) ---------------------------------------
+\newcommand{\ManufacturerName}{\TODO{Manufacturer legal name}}
+\newcommand{\ManufacturerTradeName}{\TODO{Registered trade name / trademark}}
+\newcommand{\ManufacturerAddress}{\TODO{Street, number, postal code, city, country}}
+\newcommand{\ManufacturerEmail}{\TODO{contact@manufacturer.example}}
+\newcommand{\ManufacturerDigitalContact}{\TODO{Other digital contact, or ``None''}}
+\newcommand{\ManufacturerWebsite}{\TODOurl{https://www.manufacturer.example}}
+
+% --- Vulnerability handling (Annex II, point 2) -----------------------------
+\newcommand{\SecurityContact}{\TODO{security@manufacturer.example}}
+\newcommand{\SecurityContactUrl}{\TODOurl{https://www.manufacturer.example/security}}
+\newcommand{\CvdPolicyUrl}{\TODOurl{https://www.manufacturer.example/security/cvd-policy}}
+\newcommand{\SecurityTxtUrl}{\TODOurl{https://www.manufacturer.example/.well-known/security.txt}}
+
+% --- Product identification (Annex II, point 3) -----------------------------
+\newcommand{\ProductName}{\TODO{Product commercial name}}
+\newcommand{\ProductType}{\TODO{Product type / category}}
+\newcommand{\ProductModel}{\TODO{Model number}}
+\newcommand{\ProductHwRevision}{\TODO{Hardware revision}}
+\newcommand{\ProductSwVersion}{\TODO{Firmware version}}
+\newcommand{\ProductSerialScheme}{\TODO{Serial-number format and location}}
+\newcommand{\ProductBatch}{\TODO{Batch / lot identifier}}
+\newcommand{\ProductGtin}{\TODO{GTIN / EAN / part number}}
+\newcommand{\PlacedOnMarketDate}{\TODO{DD Month YYYY}}
+
+% --- Conformity & support (Annex II, points 6-9) ----------------------------
+\newcommand{\DoCUrl}{\TODOurl{https://www.manufacturer.example/compliance/doc}}
+\newcommand{\SupportEndDate}{\TODO{DD Month YYYY}}
+\newcommand{\InstructionsUrl}{\TODOurl{https://www.manufacturer.example/docs/product}}
+\newcommand{\SbomUrl}{\TODOurl{https://www.manufacturer.example/sbom/product}}
+
+% --- Document control ---------------------------------------------------------
+\newcommand{\DocReference}{\TODO{DOC-0001}}
+\newcommand{\DocVersion}{\TODO{1.0}}
+\newcommand{\DocDate}{\today}
+\newcommand{\DocLanguage}{English}
+
+% --- Ferrita ------------------------------------------------------------------
+\newcommand{\PartnerName}{Ferrita}
+\newcommand{\PartnerLegal}{Ferrita SL \textperiodcentered\ Barcelona}
+\newcommand{\PartnerTagline}{Product security for embedded devices}
+\newcommand{\PartnerWebsite}{ferrita.eu}
+
+% --- Logos --------------------------------------------------------------------
+% e.g. \newcommand{\ClientLogo}{\includegraphics[height=1.4cm]{client-logo.pdf}}
+\newcommand{\ClientLogo}{\LogoPlaceholder{3.4cm}{1.4cm}}
+
+% --- Running header/footer text -----------------------------------------------
+\newcommand{\DocHeaderLeft}{Information and Instructions to the User}
+\newcommand{\DocHeaderRight}{\DocReference\ v\DocVersion}
+\newcommand{\DocFooterLeft}{\ManufacturerName}
+\hypersetup{pdftitle={Information and Instructions to the User -- CRA Annex II},
+            pdfauthor={\PartnerName}}
+
+% =============================================================================
+\begin{document}
+
+% ----------------------------- COVER -----------------------------------------
+\begin{titlepage}
+  \thispagestyle{empty}
+  \noindent\ClientLogo\par
+  \vspace{1.6cm}
+
+  {\ttfamily\small\color{grey}Regulation (EU) 2024/2847 \textperiodcentered\ Article 13(18) \textperiodcentered\ Annex II\par}
+  \vspace{0.5cm}
+  {\fontsize{30}{36}\selectfont\bfseries\color{ink}Information and Instructions\\to the User\par}
+  \vspace{0.9cm}
+  {\color{petrol}\rule{3cm}{2pt}\par}
+  \vspace{0.9cm}
+  {\fontsize{15}{20}\selectfont\color{ink}\ProductName\par}
+  \vspace{0.25cm}
+  {\ttfamily\color{grey}\ProductModel\ \textperiodcentered\ \ProductHwRevision\ \textperiodcentered\ \ProductSwVersion\par}
+
+  \vspace{1.2cm}
+  \begin{block}[Regulatory basis]
+    This document accompanies the product with digital elements named above
+    and provides the information required by Annex II of Regulation (EU)
+    2024/2847 (Cyber Resilience Act). Retain it for the whole support period.
+    Market surveillance authorities may request it.
+  \end{block}
+
+  \vfill
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}K L@{}}
+    \toprule
+    Manufacturer          & \ManufacturerName \\
+    Document reference    & \mono{\DocReference} \\
+    Version               & \mono{\DocVersion} \\
+    Issue date            & \DocDate \\
+    Language              & \DocLanguage \\
+    Prepared with         & \PartnerName\ --- \PartnerTagline\ (\PartnerWebsite) \\
+    \bottomrule
+  \end{tabularx}
+  \vspace{0.9cm}
+  \BrandBand
+\end{titlepage}
+
+% ----------------------------- CONTENTS --------------------------------------
+\tableofcontents
+\vfill
+\begin{block}[Document history]
+  \begin{tabularx}{\linewidth}{@{}P{1.8cm} P{4.2cm} L@{}}
+    \toprule
+    \textbf{Version} & \textbf{Date} & \textbf{Change} \\
+    \midrule
+    \mono{\DocVersion} & \DocDate & \TODO{Initial release} \\
+    \bottomrule
+  \end{tabularx}
+\end{block}
+\newpage
+
+% =============================================================================
+\section{Manufacturer identification}\reftag{Annex II, point 1}
+% =============================================================================
+\begin{kvtable}
+  Legal name                        & \ManufacturerName \\
+  Registered trade name / trademark & \ManufacturerTradeName \\
+  Postal address                    & \ManufacturerAddress \\
+  Email address                     & \ManufacturerEmail \\
+  Other digital contact             & \ManufacturerDigitalContact \\
+  Website                           & \ManufacturerWebsite \\
+\end{kvtable}
+\editnote{If an authorised representative or importer must also be identified
+(Articles 19--20 CRA), add their details here.}
+
+% =============================================================================
+\section{Vulnerability reporting and coordinated disclosure}\reftag{Annex II, point 2}
+% =============================================================================
+\begin{kvtable}
+  Single point of contact for vulnerability reports & \SecurityContact \\
+  Reporting portal                                   & \SecurityContactUrl \\
+  Coordinated vulnerability disclosure policy        & \CvdPolicyUrl \\
+  \mono{security.txt} (RFC 9116)                     & \SecurityTxtUrl \\
+\end{kvtable}
+Anyone --- users, researchers, integrators --- may report suspected
+vulnerabilities in the product through the contact above. The manufacturer
+acknowledges reports, keeps reporters informed and publishes information on
+fixed vulnerabilities in accordance with its disclosure policy and Annex~I,
+Part~II of the CRA.
+
+\editnote{State the expected acknowledgement time, whether encrypted (PGP)
+reporting is available, and whether a safe-harbour statement applies.}
+
+% =============================================================================
+\needspace{16\baselineskip}
+\section{Product identification}\reftag{Annex II, point 3}
+% =============================================================================
+\begin{kvtable}
+  Product name              & \ProductName \\
+  Product type              & \ProductType \\
+  Model                     & \mono{\ProductModel} \\
+  Hardware revision         & \mono{\ProductHwRevision} \\
+  Firmware version          & \mono{\ProductSwVersion} \\
+  Serial number             & \ProductSerialScheme \\
+  Batch / lot               & \mono{\ProductBatch} \\
+  GTIN / EAN / part number  & \mono{\ProductGtin} \\
+  Date placed on the market & \PlacedOnMarketDate \\
+\end{kvtable}
+\editnote{Explain how the user can read the version and serial number from the
+device itself (label, display, app, CLI command). Mention any variants covered
+by this document.}
+
+% =============================================================================
+\section{Intended purpose, security environment and properties}\reftag{Annex II, point 4}
+% =============================================================================
+\subsection{Intended purpose}
+\TODO{What the product is for, its target users and where it is meant to be
+operated --- e.g.\ home network behind a NAT router; industrial OT segment;
+cloud-connected consumer device.}
+
+\subsection{Essential functionalities}
+\begin{itemize}
+  \item \TODO{Function 1}
+  \item \TODO{Function 2}
+  \item \TODO{Function 3}
+\end{itemize}
+
+\subsection{Security environment provided by the manufacturer}
+\TODO{The assumptions the product's security relies on: network position,
+physical protection, trusted administrators, companion cloud service,
+required firewall rules.}
+
+\subsection{Security properties}
+\begin{kvtable}
+  Secure-by-default configuration   & \TODO{e.g.\ unique per-device credentials, unnecessary services disabled} \\
+  Authentication and access control & \TODO{e.g.\ mandatory password change, role-based access, MFA} \\
+  Data protection                   & \TODO{e.g.\ TLS 1.2+ in transit, AES-256 at rest} \\
+  Integrity                         & \TODO{e.g.\ signed firmware, secure boot, rollback protection} \\
+  Attack-surface minimisation       & \TODO{e.g.\ closed debug ports, minimal open network services} \\
+  Logging and monitoring            & \TODO{e.g.\ security event log accessible to the user} \\
+  Resilience and availability       & \TODO{e.g.\ watchdog, rate limiting, DoS mitigation} \\
+\end{kvtable}
+
+% =============================================================================
+\section{Known or foreseeable cybersecurity risks}\reftag{Annex II, point 5}
+% =============================================================================
+Circumstances related to the intended use, or to reasonably foreseeable
+misuse, that may lead to significant cybersecurity risks:
+
+\begin{alert}[Security notice]
+  \begin{itemize}
+    \item \TODO{e.g.\ Exposing the management interface directly to the Internet without a firewall or VPN.}
+    \item \TODO{e.g.\ Operating the device after the end of the support period.}
+    \item \TODO{e.g.\ Disabling automatic security updates (Section 8.5).}
+    \item \TODO{e.g.\ Weak or shared administrator passwords.}
+    \item \TODO{e.g.\ Physical access to the device by untrusted persons.}
+  \end{itemize}
+\end{alert}
+\editnote{Derive this list from the cybersecurity risk assessment (Article 13(2)
+CRA). Keep wording actionable for the user.}
+
+% =============================================================================
+\section{EU declaration of conformity}\reftag{Annex II, point 6}
+% =============================================================================
+The EU declaration of conformity for this product can be accessed at
+\DoCUrl.
+
+\editnote{If a simplified declaration is provided with the product, the full
+text must be available at the address above.}
+
+% =============================================================================
+\Needspace{8\baselineskip}
+\section{Technical security support and support period}\reftag{Annex II, point 7}
+% =============================================================================
+\begin{alert}[Support period]
+  Vulnerabilities will be handled and security updates provided
+  \textbf{until \SupportEndDate}. After this date the manufacturer no longer
+  guarantees the availability of security updates for this product.
+\end{alert}
+
+\subsection{Type of technical security support offered}
+\begin{itemize}
+  \item \TODO{Security updates delivered automatically over the air / via management portal}
+  \item \TODO{Security advisories published at URL}
+  \item \TODO{Technical support channels (email, phone, ticketing) and hours}
+  \item \TODO{Service-level targets for critical vulnerabilities}
+\end{itemize}
+\editnote{The support period must be at least 5 years unless the expected
+product lifetime is shorter (Article 13(8) CRA). If the date is also printed
+on the product or packaging, say so.}
+
+% =============================================================================
+\section{Instructions for secure use}\reftag{Annex II, point 8}
+% =============================================================================
+Detailed and up-to-date instructions are available at \InstructionsUrl.
+The following sections summarise the security-relevant instructions.
+
+\subsection{Secure initial commissioning and operation throughout the lifetime}\subreftag{Annex II, point 8(a)}
+\begin{enumerate}
+  \item \TODO{Verify packaging and device integrity on receipt.}
+  \item \TODO{Change default credentials at first start (if not already unique).}
+  \item \TODO{Connect the device to a protected network segment; recommended firewall rules.}
+  \item \TODO{Enable and verify automatic security updates.}
+  \item \TODO{Periodically review users, access rights and logs.}
+\end{enumerate}
+
+\subsection{How changes to the product affect the security of data}\subreftag{Annex II, point 8(b)}
+\TODO{Impact of configuration changes, firmware modification, third-party
+software, opening ports or enabling cloud features on the confidentiality,
+integrity and availability of user data.}
+
+\subsection{How security-relevant updates can be installed}\subreftag{Annex II, point 8(c)}
+\TODO{Automatic update behaviour, how to check the current version, how to
+trigger a manual update, how updates are authenticated (signature
+verification), how the user is notified about available updates.}
+
+\subsection{Secure decommissioning and removal of user data}\subreftag{Annex II, point 8(d)}
+\begin{enumerate}
+  \item \TODO{Remove the device from associated accounts and cloud services.}
+  \item \TODO{Perform a factory reset: exact steps.}
+  \item \TODO{Verify that personal data, credentials and keys are erased.}
+  \item \TODO{Dispose of or transfer the device; revoke certificates if applicable.}
+\end{enumerate}
+
+\subsection{Turning off automatic installation of security updates}\subreftag{Annex II, point 8(e)}
+By default this product installs security updates automatically, as required
+by Annex~I, Part~I, point (2)(c) of the CRA. Users who prefer to manage
+updates manually can disable this default as follows:
+
+\TODO{Exact steps (menu path or command). Include a clear warning that
+disabling automatic updates increases risk and makes the user responsible for
+timely manual installation.}
+
+\subsection{Information for integrators}\subreftag{Annex II, point 8(f)}
+\editnote{Delete this subsection if the product is not intended for integration
+into other products with digital elements.}
+\TODO{Provide, or reference, the information an integrator needs to comply
+with the essential cybersecurity requirements of Annex~I and the technical
+documentation requirements of Annex~VII: secure integration guidance,
+interfaces and their security assumptions, dependency and update mechanisms,
+hardening guide, SBOM availability, vulnerability notification process.}
+
+% =============================================================================
+\section{Software bill of materials}\reftag{Annex II, point 9}
+% =============================================================================
+\editnote{Delete this section if the manufacturer does not make the SBOM
+available to users.}
+The software bill of materials for firmware version \mono{\ProductSwVersion}
+is available at \SbomUrl.
+
+\begin{kvtable}
+  Format            & \TODO{CycloneDX 1.5 (JSON) / SPDX 2.3} \\
+  Access conditions & \TODO{Public / on request / authenticated customers} \\
+\end{kvtable}
+
+% =============================================================================
+\Needspace{20\baselineskip}
+\section*{About this document}
+\addcontentsline{toc}{section}{About this document}
+% =============================================================================
+This document was prepared by \ManufacturerName\ with the support of
+\textbf{\PartnerName} (\PartnerLegal, \PartnerWebsite). The manufacturer
+remains solely responsible for the accuracy of its content and for the
+conformity of the product with Regulation (EU) 2024/2847.
+
+Reference text: Regulation (EU) 2024/2847, in particular Article~13, Annex~I
+and Annex~II --- \url{https://eur-lex.europa.eu/eli/reg/2024/2847/oj}.
+
+\needspace{9\baselineskip}
+\vspace{1.2cm}
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+  {\color{grey}\small For the manufacturer}\\[1.8cm]
+  {\color{rulegrey}\rule{\linewidth}{0.4pt}}\\
+  \small Name, function, date, signature
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+  {\color{grey}\small Reviewed by \PartnerName}\\[1.8cm]
+  {\color{rulegrey}\rule{\linewidth}{0.4pt}}\\
+  \small Name, function, date, signature
+\end{minipage}
+
+\end{document}

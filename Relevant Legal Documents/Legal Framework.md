@@ -1,5 +1,7 @@
 # Introduction
 
+If you are looking for the road map when onboarding a client and starting the process go here [[Road_map_to_compliance]]. If you are looking for the full explanation keep reading.
+
 One of the most important parts of Ferrita, from now one called in this document RIOT as the internal name, it is the fact of being a real problem since moment zero.
 
 Other companies need to create a sense of urgency to promote and sell their services. This has always been one of the most difficult problems when building a startup. The need to justify, the need to make a company or a user need the services that the startup offers.
@@ -22,6 +24,7 @@ Annexes are divided by categories depending on which part of the process they ta
 
 ## Development and Engineering (Annex I & VII) 
 ### Annex I
+
 Annex I lays down the essential cybersecurity requirements relating to the properties of products with digital elements.
 ```text
 The original document talks about "products with digital elements" as a way to refer to all the profucts falling inside the CRA framework. For simplicity in this document they are going to be called just products.
@@ -110,6 +113,7 @@ Every manufacturer of these products must follow thse set of rules:
 	Accompany every updates with clear, actionable advisory notices explaining what was fixed and what action the user needs to take.
 
 ### Annex VII
+
 Annex VII lays down the minimum information the technical documentation of such products must contain.
 
 #### Specific rules
@@ -158,4 +162,57 @@ Annex VII lays down the minimum information the technical documentation of such 
 
 6.  A  copy of the EU declaration of conformity. [[EU_Declaration_Of_Conformity_Template]]
 7.  The SBOM
+
+## Product Categorization (Annex III & IV)
+
+### Annex III
+
+It is important to categorize the product, depending on which class it falls into, different rules apply to it. If a product is not found on this categories, ex: a custom made PCB with a Yocto OS and a user space application for a washing machine, then it is defaulted to "Default Class". It is netiher important neither critical.
+
+#### Important Products
+##### Class I
+1. Identity management systems and privileged access management software and hardware, including authentication and access control readers, including biometric readers 
+2. Standalone and embedded browsers 
+3. Password managers 
+4. Software that searches for, removes, or quarantines malicious software 
+5. Products with digital elements with the function of virtual private network (VPN) 
+6. Network management systems 
+7. Security information and event management (SIEM) systems 
+8. Boot managers 
+9. Public key infrastructure and digital certificate issuance software 
+10. Physical and virtual network interfaces 
+11. Operating systems 
+12. Routers, modems intended for the connection to the internet, and switches 
+13. Microprocessors with security-related functionalities 
+14. Microcontrollers with security-related functionalities 
+15. Application specific integrated circuits (ASIC) and field-programmable gate arrays (FPGA) with security-related functionalities 
+16. Smart home general purpose virtual assistants 
+17. Smart home products with security functionalities, including smart door locks, security cameras, baby monitoring systems and alarm systems 
+18. Internet connected toys covered by Directive 2009/48/EC of the European Parliament and of the Council (1) that have social interactive features (e.g. speaking or filming) or that have location tracking features 
+19. Personal wearable products to be worn or placed on a human body that have a health monitoring (such as tracking) purpose and to which Regulation (EU) 2017/745 or (EU) No 2017/746 do not apply, or personal wearable products that are intended for the use by and for children 
+##### Class II 
+1. Hypervisors and container runtime systems that support virtualised execution of operating systems and similar environments 
+2. Firewalls, intrusion detection and prevention systems 
+3. Tamper-resistant microprocessors 
+4. Tamper-resistant microcontrollers
+
+### Annex IV
+
+[Annex III](#Annex%20III) defined which products fall inside the category of important products. [Annex IV](#Annex%20IV) defines the products that fall into **critical**.
+
+1. Hardware Devices with Security Boxes 
+2. Smart meter gateways within smart metering systems as defined in Article 2, point (23) of Directive (EU) 2019/944 of the European Parliament and of the Council (1) and other devices for advanced security purposes, including for secure cryptoprocessing 
+3. Smartcards or similar devices, including secure elements
+
+## Legal Release (Annex II & V)
 ### Annex II
+
+Annex II specifies the minimum information the product shall be accompanied by. Here is a tempalte with all the contents to be filled by our clients for each one of their products they want to certify.
+
+[[Product Information Template]]
+
+### Annex V
+
+Annex V specifies the exact information that the EU declaration of conformity should contain. Here is a template with all the contents to be filled by our clients for each one of their products they want to certify.
+
+[[EU_Declaration_Of_Conformity_Template]]

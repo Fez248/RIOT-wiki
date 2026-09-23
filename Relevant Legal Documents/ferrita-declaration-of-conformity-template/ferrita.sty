@@ -1,0 +1,153 @@
+% =============================================================================
+%  ferrita.sty  --  Ferrita document identity for pdfLaTeX (Overleaf)
+%
+%  Palette (brand board rev. 01):
+%    Grafito       #191D1E  body text, brand backgrounds
+%    Petroli       #14494E  action colour: links, rules, key labels
+%    Petroli suau  #E4ECEB  block backgrounds, tables, highlights
+%    Ambar senyal  #D9812A  ONLY alerts, deadlines, unfilled placeholders
+%    Paper         #F2F3F1  page/document background tone
+%    Gris          #5E6764  secondary text, footnotes
+%  Type: IBM Plex Sans for all text; IBM Plex Mono only for machine data
+%  (identifiers, versions, document numbers, regulation article refs).
+%  No gradients, no shadows, no rounded boxes.
+% =============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ferrita}[2026/09/23 Ferrita document identity]
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[english]{babel}
+\RequirePackage[sfdefault]{plex-sans}
+\RequirePackage{plex-mono}
+\RequirePackage[a4paper,top=2.6cm,bottom=2.4cm,left=2.2cm,right=2.2cm,
+  headheight=14pt,headsep=16pt,footskip=28pt]{geometry}
+\RequirePackage{graphicx}
+\RequirePackage[table]{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage{tabularx}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{breakable}
+\RequirePackage{microtype}
+\RequirePackage{parskip}
+\RequirePackage{needspace}
+\RequirePackage[hidelinks,pdfusetitle]{hyperref}
+
+% ----------------------------- palette ---------------------------------------
+\definecolor{ink}{HTML}{191D1E}
+\definecolor{petrol}{HTML}{14494E}
+\definecolor{petrolsoft}{HTML}{E4ECEB}
+\definecolor{amber}{HTML}{D9812A}
+\definecolor{paper}{HTML}{F2F3F1}
+\definecolor{rulegrey}{HTML}{C7CCC8}
+\definecolor{grey}{HTML}{5E6764}
+\color{ink}
+
+\hypersetup{colorlinks=true,linkcolor=petrol,urlcolor=petrol,citecolor=petrol}
+\urlstyle{tt}
+
+% ----------------------------- brand mark (TikZ rendition) -------------------
+% Replace \FerritaLogo with \includegraphics{...} once the real asset is used.
+% The mark is always stroked, never filled or rotated.
+\newcommand{\FerritaMark}[2][ink]{% #1 colour, #2 total height
+  \resizebox{!}{#2}{%
+  \begin{tikzpicture}[x=1cm, y=1cm]
+    \useasboundingbox (0,0.42) rectangle (2.06,1.08);
+    \draw[#1!45!white, line width=1.2pt, line join=round, line cap=round]
+      (0,0.75) -- (0.12,0.75) -- (0.18,0.98) -- (0.24,0.54) -- (0.30,0.89)
+      -- (0.36,0.60) -- (0.42,1.02) -- (0.48,0.62) -- (0.54,0.84) -- (0.60,0.51)
+      -- (0.66,0.95) -- (0.72,0.66) -- (0.78,0.80) -- (0.88,0.75) -- (1.04,0.75);
+    \draw[#1, line width=2.4pt, rounded corners=2.6pt] (1.04,0.47) rectangle (1.66,1.03);
+    \draw[amber, line width=1.5pt, line cap=round] (1.66,0.75) -- (2.06,0.75);
+  \end{tikzpicture}}}
+\newcommand{\FerritaWordmark}[2][ink]{{\color{#1}\bfseries\fontsize{#2}{#2}\selectfont Ferrita}}
+\newcommand{\FerritaLockup}[2][ink]{% #1 colour, #2 height
+  \raisebox{-0.08\height}{\FerritaMark[#1]{#2}}\hspace{0.28em}\FerritaWordmark[#1]{#2}}
+
+% ----------------------------- placeholders ----------------------------------
+% Unfilled content is amber + mono: it must be impossible to ship by accident.
+\newcommand{\TODO}[1]{{\color{amber}\ttfamily\hyphenchar\font=45\relax\sloppy [#1]}}
+\newcommand{\TODOurl}[1]{{\color{amber}\ttfamily [\url{#1}]}}
+\newcommand{\editnote}[1]{\par\noindent\begin{minipage}{\linewidth}\color{grey}\small #1\end{minipage}\par}
+\newcommand{\mono}[1]{{\ttfamily #1}}
+
+% Regulation reference tag placed under a section title.
+\newcommand{\reftag}[1]{\par\vspace{-0.9em}\noindent
+  {\ttfamily\footnotesize\color{grey}#1}\par\vspace{0.55em}}
+\newcommand{\subreftag}[1]{\par\vspace{-0.25em}\noindent
+  {\ttfamily\footnotesize\color{grey}#1}\par\vspace{0.35em}}
+
+% Logo placeholder box (client logo), sharp corners, thin rule.
+\newcommand{\LogoPlaceholder}[2]{%
+  {\color{rulegrey}\fbox{\parbox[c][#2][c]{#1}{\centering\color{grey}\footnotesize CLIENT LOGO}}}}
+
+% ----------------------------- tables ----------------------------------------
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{6pt}
+\arrayrulecolor{rulegrey}
+% \leavevmode keeps colour whatsits out of vertical mode, otherwise parskip
+% glue is inserted above the cell and rows drift out of alignment.
+\newcolumntype{L}{>{\raggedright\arraybackslash\leavevmode}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash\leavevmode}p{#1}}
+\newcolumntype{K}{>{\raggedright\arraybackslash\leavevmode\color{grey}}p{4.6cm}}
+% Key/value table: \begin{kvtable} Key & value \\ ... \end{kvtable}
+\newenvironment{kvtable}{%
+  \noindent\tabularx{\textwidth}{@{}K L@{}}\toprule}{%
+  \bottomrule\endtabularx\par}
+
+% ----------------------------- boxes -----------------------------------------
+\tcbset{sharp corners, boxrule=0pt, arc=0pt, outer arc=0pt, left=10pt, right=10pt,
+  top=8pt, bottom=8pt, before skip=10pt, after skip=12pt, parbox=false}
+% Neutral highlighted block (petrol soft background, petrol left rule).
+\newtcolorbox{block}[1][]{breakable, colback=petrolsoft, colframe=petrol, leftrule=2pt,
+  fonttitle=\bfseries, coltitle=ink, colbacktitle=petrolsoft, title=#1,
+  toptitle=6pt, bottomtitle=0pt}
+% Attention block: amber is reserved for risks, deadlines, alerts.
+\newtcolorbox{alert}[1][]{breakable, colback=white, colframe=amber, leftrule=2pt,
+  toprule=0.4pt, bottomrule=0.4pt, rightrule=0.4pt,
+  fonttitle=\bfseries, coltitle=ink, colbacktitle=white, title=#1,
+  toptitle=6pt, bottomtitle=0pt}
+% Formal statement block: framed in petrol, white background.
+\newtcolorbox{statement}{breakable, colback=white, colframe=petrol, boxrule=0.8pt}
+
+% ----------------------------- headings --------------------------------------
+\titleformat{\section}
+  {\fontsize{16}{20}\selectfont\bfseries\color{ink}}
+  {\textcolor{petrol}{\thesection}}{0.7em}{}
+  [\vspace{-0.7em}{\color{rulegrey}\rule{\textwidth}{0.4pt}}]
+\titleformat{\subsection}
+  {\fontsize{12.5}{16}\selectfont\bfseries\color{ink}}
+  {\textcolor{petrol}{\thesubsection}}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.8em}{0.9em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.4em}
+\RequirePackage{etoolbox}
+\pretocmd{\section}{\Needspace{9\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{7\baselineskip}}{}{}
+\setlist{nosep, itemsep=3pt, leftmargin=1.4em}
+\setlist[itemize]{label=\textcolor{petrol}{\rule[0.35ex]{0.5em}{0.4pt}}}
+\emergencystretch=3em
+\setlength{\parskip}{6pt}
+
+% ----------------------------- header / footer -------------------------------
+% Documents define \DocHeaderLeft, \DocHeaderRight, \DocFooterLeft before use.
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{{\color{rulegrey}\hrule width\headwidth height 0.4pt}}
+\renewcommand{\footrule}{{\color{rulegrey}\hrule width\headwidth height 0.4pt}}
+\fancyhead[L]{\small\DocHeaderLeft}
+\fancyhead[R]{\small\ttfamily\color{grey}\DocHeaderRight}
+\fancyfoot[L]{\small\color{grey}\DocFooterLeft}
+\fancyfoot[C]{\small\color{grey}\thepage\,/\,\pageref{LastPage}}
+\fancyfoot[R]{\FerritaLockup[grey]{8pt}}
+
+% Cover page brand band: dark ink strip with the lockup.
+\newcommand{\BrandBand}{%
+  \noindent\colorbox{ink}{\parbox[c][1.9cm][c]{\dimexpr\textwidth-2\fboxsep}{%
+    \hspace{0.7cm}\FerritaLockup[paper]{18pt}\hfill
+    {\ttfamily\footnotesize\color{rulegrey}\PartnerTagline}\hspace*{0.7cm}}}\par}
