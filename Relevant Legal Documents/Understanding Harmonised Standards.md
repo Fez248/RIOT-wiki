@@ -1,5 +1,3 @@
-# Understanding Harmonised Standards
-
 The Cyber Resilience Act outlines its essential cybersecurity requirements in broad, legally phrased terms (e.g., "protect data at rest," "ensure a secure default configuration"). A Harmonised Standard translates those broad legal requirements into highly specific, testable engineering specifications.
 
 Currently, the European Commission has mandated three organizations (CEN, CENELEC, and ETSI) under Standardisation Request M/606 to write 41 of these standards.
