@@ -12,12 +12,28 @@
             "id": "d588e732e2a08cfc",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Relevant Legal Documents/law-pdfs/CRA_OJ_L_202402847_EN_TXT.pdf"
+                "file": "Relevant Legal Documents/Understanding Harmonised Standards.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "CRA_OJ_L_202402847_EN_TXT"
+              "icon": "lucide-file",
+              "title": "Understanding Harmonised Standards"
+            }
+          },
+          {
+            "id": "b6526786ca3dc6d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Relevant Legal Documents/Understanding Harmonised Standards.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Understanding Harmonised Standards"
             }
           }
         ]
@@ -47,16 +63,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Relevant Legal Documents/Road_map_to_compliance.md",
+                "file": "Relevant Legal Documents/Road map to compliance.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Road_map_to_compliance"
+              "title": "Road map to compliance"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -223,12 +238,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "407d5f4ec4ad5f80",
+  "active": "32dc3d94d5357ca3",
   "lastOpenFiles": [
-    "Software Architecture/architecure.md",
-    "Relevant Legal Documents/Road_map_to_compliance.md",
+    "Understanding Harmonised Standardsj.md",
     "Relevant Legal Documents/Legal Framework.md",
+    "Relevant Legal Documents/Understanding Harmonised Standards.md",
+    "Relevant Legal Documents/Road map to compliance.md",
+    "Strategy/Scalability.md",
+    "Strategy",
     "Relevant Legal Documents/law-pdfs/CRA_OJ_L_202402847_EN_TXT.pdf",
+    "Software Architecture/architecure.md",
     "Relevant Legal Documents/law-pdfs/Commission_Implementation_OJ_L_202500138_EN_TXT.pdf",
     "Relevant Legal Documents/ferrita-user-information-template/cra-user-information-template-v2.pdf",
     "Relevant Legal Documents/ferrita-declaration-of-conformity-template/eu-declaration-of-conformity-template-v2.pdf",
@@ -238,7 +257,6 @@
     "Relevant Legal Documents/CRA_OJ_L_202402847_EN_TXT.pdf",
     "Relevant Legal Documents/law-pdfs",
     "Relevant Legal Documents/pdfs",
-    "Relevant Legal Documents/Commission_Implementation_OJ_L_202500138_EN_TXT.pdf",
     "Relevant Legal Documents/EU_Declaration_Of_Conformity_Template.md",
     "Relevant Legal Documents/Product Information Template.md",
     "Relevant Legal Documents/Product Information.md",

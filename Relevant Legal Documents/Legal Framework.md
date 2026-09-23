@@ -1,6 +1,6 @@
 # Introduction
 
-If you are looking for the road map when onboarding a client and starting the process go here [[Road_map_to_compliance]]. If you are looking for the full explanation keep reading.
+If you are looking for the road map when onboarding a client and starting the process go here [[Road map to compliance]]. If you are looking for the full explanation keep reading.
 
 One of the most important parts of Ferrita, from now one called in this document RIOT as the internal name, it is the fact of being a real problem since moment zero.
 
@@ -148,11 +148,9 @@ Annex VII lays down the minimum information the technical documentation of such 
 
 4. Determination of the support period. Information about the technical and commercial justification used to determine the support end date. It should be taken into account information like: expected physical lifespan of the hardware, software component lifecycle limits, industry standards for similar products, and user expectations.
 
-5. State which officail standards or technical specifications were used to prove compliance.
+5. State which officail standards or technical specifications were used to prove compliance, see [[Understanding Harmonised Standards]].
 	-  Harmonised Standards / Common Specifications / EU Certification Schemes: List any official standards published in the EU Official Journal that you followed (e.g., EN standards derived from IEC 62443 or ETSI EN 303 645).
-
 	-  Partial Application: If you only applied specific clauses of a standard, you must explicitly list which sections were used and which were omitted.
-
 	-  Alternative Solutions / Custom Implementation: If no official harmonized standards were used (or were only partially applied), you must document the alternative technical specifications or engineering frameworks used to meet the Annex I requirements.
 
 6.  Reports of the tests carried out to verify the conformity of the product.
@@ -160,7 +158,7 @@ Annex VII lays down the minimum information the technical documentation of such 
 	
 	Vulnerability Handling Verification: Evidence showing that your vulnerability intake, patch management, SBOM generation, and update delivery systems function as claimed.
 
-6.  A  copy of the EU declaration of conformity. [[EU_Declaration_Of_Conformity_Template]]
+6.  A  copy of the EU declaration of conformity.[[eu-declaration-of-conformity-template-v2.pdf]]
 7.  The SBOM
 
 ## Product Categorization (Annex III & IV)
@@ -215,4 +213,4 @@ Annex II specifies the minimum information the product shall be accompanied by. 
 
 Annex V specifies the exact information that the EU declaration of conformity should contain. Here is a template with all the contents to be filled by our clients for each one of their products they want to certify.
 
-[[EU_Declaration_Of_Conformity_Template]]
+[[eu-declaration-of-conformity-template-v2.pdf]]
