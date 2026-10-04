@@ -34,8 +34,19 @@
               "icon": "lucide-file",
               "title": "How to check for security backports"
             }
+          },
+          {
+            "id": "a6921c00f0a9930d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -203,13 +214,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "4d4ed48f9391a36d",
+  "active": "a6921c00f0a9930d",
   "lastOpenFiles": [
-    "Pasted image 20261004234353.png",
     "Manual Analysis/archer-c50/v4/CVEs with exploits.md",
-    "Manual Analysis/archer-c50/v4/CVE-2022-0778.md",
-    "CyberTheory/How to check for security backports.md",
     "Manual Analysis/archer-c50/v4/Notes from EMBA Static Analysis.md",
+    "CyberTheory/How to check for security backports.md",
+    "Manual Analysis/archer-c50/v4/CVE-2022-0778.md",
+    "Pasted image 20261004234353.png",
     "Pasted image 20261003131520.png",
     "CyberTheory",
     "Manual Analysis/archer-c50/v4/html-report/index.html",
